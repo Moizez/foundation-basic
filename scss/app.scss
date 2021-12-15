@@ -63,3 +63,23 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+body {
+    background-color: #ccc;
+}
+
+.logo {
+    padding-top: 30px;
+}
+
+.grid-container {
+    background-color: #fff;
+}
+
+.banner {
+    background-image: url('../assets/images/banner.png');
+    background-size: cover;
+    background-position: bottom;
+    height: 600px;
+    margin-top: -180px;
+}
