@@ -64,6 +64,14 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+:root {
+    --animate-duration: 2s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: NeoSansProLight;
     src: url("/assets/fonts/NeoSansProLight.OTF");
@@ -81,6 +89,8 @@
 
 header {
     height: 100px;
+    position: relative;
+    z-index: 999;
 }
 
 body {
@@ -214,25 +224,23 @@ footer {
     label {
         color: #fff;
     }
+}
 
-    label {
-        text-align: center;
-        font-size: 60px;
-        font-weight: 600;
-        letter-spacing: 0.5rem;
-    }
+.contact--left label {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
 }
 
 .contact--left h2 {
     text-align: center;
-    color: #fff;
     font-weight: normal;
     font-size: 30px;
 }
 
 .contact--right h2 {
     text-align: left;
-    color: #fff;
     font-weight: normal;
     font-size: 26px;
 }
@@ -242,4 +250,72 @@ footer {
     height: 100px;
     background-color: #fff;
     margin: 0 90px;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    header {
+        display: none;
+    }
+
+    .banner {
+        margin-top: -380px;
+    }
+
+    .occupation--desc {
+        width: 260px;
+        margin: 0;
+        text-align: center;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .vertical-line {
+        width: 80%;
+        height: 0.5px;
+        margin: 20px 0;
+    }
+
+    .contact--left label {
+        font-size: 40px;
+        letter-spacing: 0.5rem;
+    }
+
+    .contact--left h2 {
+        font-size: 20px;
+    }
+
+    .contact--right h2 {
+        font-size: 17px;
+    }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .vertical-line {
+        display: none;
+    }
+
+    .contact--left label {
+        font-size: 35px;
+        letter-spacing: 0.5rem;
+    }
+
+    .contact--left h2 {
+        font-size: 20px;
+    }
+
+    .contact--right h2 {
+        font-size: 17px;
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
 }
